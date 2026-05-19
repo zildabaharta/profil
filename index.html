@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi Saya</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 id="page-title" class="page-title" title="Judul halaman profil pribadi">Profil Pribadi Saya</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Profile Image Section -->
+            <section class="profile-image-section">
+                <img src="./aku.jpeg" alt="Foto Profil Pribadi" width="200" height="200" class="profile-img" title="Foto profil mahasiswa">
+            </section>
+
+            <!-- Personal Information Section -->
+            <section class="info-section">
+                <h2 class="section-title">Identitas Pribadi</h2>
+                
+                <!-- Paragraphs with personal info -->
+                <p id="nama-paragraph" class="info-paragraph" title="Nama lengkap mahasiswa">
+                    <strong>Nama Lengkap:</strong> Zilda G. Baharta
+                </p>
+                
+                <p id="nim-paragraph" class="info-paragraph" title="Nomor Identitas Mahasiswa">
+                    <strong>NIM:</strong> 246250082
+                </p>
+                
+                <p id="hobi-paragraph" class="info-paragraph" title="Hobi dan minat pribadi">
+                    <strong>Hobi:</strong> Read novels, Baking
+                </p>
+            </section>
+
+            <!-- Biodata Table Section -->
+            <section class="table-section">
+                <h2 class="section-title">Tabel Biodata</h2>
+                <table class="biodata-table" title="Tabel informasi biodata pribadi">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Alamat</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Zilda G. Baharta</td>
+                            <td>22 Oktober 2006</td>
+                            <td>JL. Jamur</td>
+                            <td>zldabhrta@email.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Hobbies List Section -->
+            <section class="hobbies-section">
+                <h2 class="section-title">Daftar Hobi dan Aktivitas</h2>
+                
+                <div class="lists-container">
+                    <!-- Unordered List -->
+                    <div class="list-item">
+                        <h3>Hobi Favorit (Unordered List)</h3>
+                        <ul class="hobby-list" title="Daftar hobi dalam bentuk unordered list">
+                            <li>Read novels</li>
+                            <li>Baking</li>
+                            <li>Sleeping</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ordered List -->
+                    <div class="list-item">
+                        <h3>Aktivitas Favorit (Ordered List)</h3>
+                        <ol class="activity-list" title="Daftar aktivitas dalam bentuk ordered list">
+                            <li>Scrolling</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="form-section">
+                <h2 class="section-title">Formulir Kontak</h2>
+                <form class="contact-form" title="Formulir pengisian data kontak">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="nama" class="form-label">Nama:</label>
+                        <input type="text" id="nama" name="nama" class="form-input" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Masukkan email Anda" required>
+                    </div>
+
+                    <!-- Gender Radio Buttons -->
+                    <div class="form-group">
+                        <label class="form-label">Jenis Kelamin:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="jenis-kelamin" value="laki-laki" class="radio-input"> Laki-laki
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="jenis-kelamin" value="perempuan" class="radio-input"> Perempuan
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Hobbies Checkboxes -->
+                    <div class="form-group">
+                        <label class="form-label">Hobi:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="hobi" value="pemrograman" class="checkbox-input"> Read novels
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="hobi" value="desain" class="checkbox-input"> Baking
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="hobi" value="membaca" class="checkbox-input"> Sleeping
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submit-button" title="Tombol untuk mengirim formulir">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Profil Pribadi Saya. Semua hak dilindungi.</p>
+        </footer>
+    </div>
+</body>
+</html>

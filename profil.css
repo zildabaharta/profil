@@ -1,0 +1,543 @@
+/* ===================================
+   RESPONSIVE PERSONAL PROFILE CSS
+   Mobile-First Approach
+   =================================== */
+
+/* ===== ROOT & GENERAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0f3460;
+    --secondary-color: #16a085;
+    --accent-color: #e74c3c;
+    --dark-bg: #0a1e2e;
+    --light-bg: #16213e;
+    --text-color: #ecf0f1;
+    --border-color: #1a5f7a;
+    --success-color: #16a085;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a1e2e 0%, #16213e 50%, #0f3460 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== CONTAINER & LAYOUT ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(22, 33, 62, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid rgba(22, 160, 133, 0.2);
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(135deg, #0f3460 0%, #16a085 100%);
+    color: white;
+    padding: 28px 18px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ===== PROFILE IMAGE SECTION ===== */
+.profile-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 4px solid var(--secondary-color);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== SECTION STYLING ===== */
+.section-title {
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.info-section .section-title {
+    grid-column: 1 / -1;
+}
+
+/* ===== INFO SECTION ===== */
+.info-section {
+    background-color: rgba(15, 52, 96, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    align-items: start;
+}
+
+.info-paragraph {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ecf0f1;
+    background-color: rgba(22, 33, 62, 0.5);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(22, 160, 133, 0.2);
+}
+
+#nim-paragraph {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+.info-paragraph strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* ===== TABLE SECTION ===== */
+.table-section {
+    overflow-x: auto;
+}
+
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: rgba(22, 33, 62, 0.5);
+}
+
+.biodata-table thead {
+    background: linear-gradient(90deg, #0f3460 0%, #16a085 100%);
+    color: white;
+}
+
+.biodata-table th,
+.biodata-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(22, 160, 133, 0.2);
+    color: #ecf0f1;
+    font-size: 14px;
+}
+
+.biodata-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.biodata-table tbody tr:hover {
+    background-color: rgba(22, 160, 133, 0.1);
+}
+
+.biodata-table tbody tr:nth-child(odd) {
+    background-color: rgba(15, 52, 96, 0.3);
+}
+
+/* ===== HOBBIES SECTION ===== */
+.hobbies-section {
+    background-color: rgba(15, 52, 96, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.lists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.list-item {
+    background-color: rgba(22, 33, 62, 0.5);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.list-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hobby-list,
+.activity-list {
+    margin-left: 20px;
+    color: #ecf0f1;
+}
+
+.hobby-list li,
+.activity-list li {
+    margin-bottom: 8px;
+}
+
+.hobby-list li::marker {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+    background-color: rgba(15, 52, 96, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-input {
+    padding: 10px 12px;
+    border: 2px solid rgba(22, 160, 133, 0.3);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(10, 30, 46, 0.5);
+    color: #ecf0f1;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    background-color: rgba(22, 33, 62, 0.8);
+    box-shadow: 0 0 8px rgba(22, 160, 133, 0.3);
+}
+
+.form-input::placeholder {
+    color: #888;
+}
+
+/* ===== RADIO BUTTONS ===== */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    color: #ecf0f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.radio-input,
+.checkbox-input {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--secondary-color);
+}
+
+/* ===== CHECKBOXES ===== */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-btn {
+    padding: 8px 24px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: #138d75;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(90deg, #0a1e2e 0%, #0f3460 100%);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid rgba(22, 160, 133, 0.2);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - TABLET
+   Screen width: 768px and above
+   =================================== */
+@media (min-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    .main-content {
+        padding: 32px;
+        gap: 32px;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .lists-container {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .list-item {
+        flex: 1;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
+    .radio-group {
+        gap: 30px;
+    }
+
+    .checkbox-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    .checkbox-label {
+        margin-right: 10px;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - DESKTOP
+   Screen width: 1024px and above
+   =================================== */
+@media (min-width: 1024px) {
+    .main-content {
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .page-title {
+        font-size: 36px;
+    }
+
+    .profile-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .info-section {
+        padding: 24px;
+    }
+
+    .info-paragraph {
+        padding: 20px;
+    }
+
+    .biodata-table th,
+    .biodata-table td {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .form-group:nth-child(3),
+    .form-group:nth-child(4),
+    .form-group:nth-child(5) {
+        grid-column: 1 / -1;
+    }
+
+    .submit-btn {
+        padding: 10px 28px;
+        font-size: 15px;
+        grid-column: 1;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - LARGE DESKTOP
+   Screen width: 1440px and above
+   =================================== */
+@media (min-width: 1440px) {
+    .container {
+        margin: 24px auto;
+    }
+
+    .page-title {
+        font-size: 40px;
+        letter-spacing: 1.5px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .info-paragraph {
+        font-size: 16px;
+    }
+
+    .form-input {
+        font-size: 15px;
+        padding: 11px 14px;
+    }
+
+    .submit-btn {
+        padding: 10px 28px;
+        font-size: 15px;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        background-color: white;
+    }
+
+    .header {
+        color: #0f3460;
+        background: none;
+        border-bottom: 2px solid #0f3460;
+    }
+
+    .contact-form {
+        display: none;
+    }
+
+    .submit-btn {
+        display: none;
+    }
+
+    .page-title,
+    .section-title,
+    p,
+    td,
+    th,
+    li {
+        color: #000;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY & TRANSITIONS
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus visible for keyboard navigation */
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
